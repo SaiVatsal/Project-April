@@ -1,0 +1,45 @@
+# April - Personal AI Assistant Dependencies
+# Install with: pip install -r requirements.txt
+
+# Voice Processing
+SpeechRecognition>=3.10.0
+pyttsx3>=2.90
+PyAudio>=0.2.13
+
+# GUI and System Tray
+pystray>=0.19.4
+Pillow>=10.0.0
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+requests>=2.31.0
+
+# Security
+cryptography>=41.0.0
+
+# System Control
+pywin32>=306
+screen-brightness-control>=0.22.0
+pyautogui>=0.9.54
+
+# WhatsApp and Browser Automation
+pywhatkit>=5.4
+selenium>=4.15.0
+
+# Screen Capture
+mss>=9.0.0
+opencv-python>=4.8.0
+
+# Weather and Market Data
+yfinance>=0.2.31
+
+# AI - Local (Ollama)
+ollama>=0.2.0
+
+# System Monitoring (for advanced features)
+psutil>=5.9.0
+
+# Additional utilities
+python-dotenv>=1.0.0
+schedule>=1.2.0
