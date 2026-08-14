@@ -17,7 +17,8 @@ April is a fully local, privacy-focused AI desktop assistant for Windows with vo
 
 2. **Install Ollama (for AI chat):**
    - Download from [ollama.com](https://ollama.com)
-   - Run: `ollama pull gemma3:4b`
+   - Run: `ollama pull gemma3:1b`
+   - try to install leess billion and smart ai locally model for fatser model 
 
 3. **Start April:**
    ```batch
