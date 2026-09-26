@@ -1,215 +1,381 @@
-# 🤖 April - Personal AI Assistant
+# April - Personal AI Assistant
 
-## Overview
-April is a fully local, privacy-focused AI desktop assistant for Windows with voice control, wake word detection, intelligent responses, system automation, and more. **Powered by Ollama with Gemma models** - runs completely offline with no API keys needed!
+April is a local AI assistant for Windows. It can understand voice commands, answer questions, control your PC, open apps, manage files, and perform other everyday tasks.
 
-## Quick Start
+April can run AI models locally using Ollama, so you do not need an API key for normal AI conversations.
 
-### Installation
-1. **Run the installer:**
-   ```batch
-   install_april.bat
-   ```
-   Or manually install dependencies:
-   ```batch
-   pip install -r requirements.txt
-   ```
+## Getting Started
 
-2. **Install Ollama (for AI chat):**
-   - Download from [ollama.com](https://ollama.com)
-   - Run: `ollama pull gemma3:1b`
-   - try to install leess billion and smart ai locally model for fatser model 
+### 1. Install April
 
-3. **Start April:**
-   ```batch
-   python april.py
-   ```
+Run:
 
-4. **Start minimized (background mode):**
-   ```batch
-   python april.py --minimized
-   ```
+```batch
+install_april.bat
+```
+
+Or install the dependencies manually:
+
+```batch
+pip install -r requirements.txt
+```
+
+### 2. Install Ollama
+
+Install Ollama and download a small local model:
+
+```batch
+ollama pull gemma3:1b
+```
+
+For faster performance, use a smaller model that works well on your PC.
+
+### 3. Start April
+
+```batch
+python april.py
+```
+
+To start April in the background:
+
+```batch
+python april.py --minimized
+```
 
 ## Features
 
-### 🧠 Intelligent Responses (NEW!)
-- **Safe Math Calculator:** "sqrt(144)", "factorial(5)", "sin(pi/2)"
-- **Unit Conversions:** "100 kg to lbs", "30°C to fahrenheit", "50 miles to km"
-- **Web Search:** "search python tutorials" (uses DuckDuckGo - no API!)
-- **Word Definitions:** "define algorithm"
-- **System Status:** "system status", "cpu usage", "memory usage"
-- **Top Processes:** "what's using memory"
-- **Network Info:** "my ip address"
+### AI Chat
 
-### 🎤 Voice Control
-- **Wake Word:** Say "Hey April" to activate
-- Voice commands for all features
-- Text-to-speech responses
-- Voice profile security
+* Runs AI locally with Ollama
+* No API key required
+* Works without cloud AI
+* Supports normal conversations and questions
+* Keeps conversation context
 
-### 💬 AI Chat (Ollama + Gemma)
-- Local AI - runs on your machine, no internet needed!
-- Ask anything: "explain quantum computing"
-- Context-aware conversations
-- No API keys required
+Example:
 
-### 🖥️ Application Control
-- **Open ANY app:** "open chrome", "open photoshop", "open spotify"
-- **Close ANY app:** "close notepad", "close discord"
-- Smart detection: Start Menu, Program Files, Windows Search
+```text
+Explain quantum computing
+```
 
-### 🌐 Web Browsing
-- "Open YouTube" / "Open Google"
-- "Search for Python tutorials"
-- Supports any website
+### Voice Control
 
-### 📊 Market Data
-- Real-time stock prices: "Stock AAPL"
-- Cryptocurrency: "Bitcoin price"
-- Trend analysis with trading suggestions
-- Historical data logging
+* Say **Hey April** to activate
+* Control April using your voice
+* Text-to-speech responses
+* Optional voice profile
 
-### 🌤️ Weather (FREE - No API!)
-- "Weather in New York"
-- Uses wttr.in - no API key needed!
-- Daily forecasts
+### Math and Conversions
 
-### 📁 File Management
-- "Organize my files" - Auto-sorts by type
-- "Clean junk files" - Removes temp files
-- "Find large files" - Over 100MB
-- "Find duplicates" - Same filenames
-- Organizes into Videos, Music, Pictures, Documents, Archives, Code
+April can handle simple calculations and conversions.
 
-### 💻 System Control
-- "Shutdown my laptop"
-- "Restart"
-- "Lock screen"
-- "Volume up/down"
-- "Brightness 50"
-- "System status" - CPU, RAM, Disk, Battery
-- "What's using memory" - Top processes
+Examples:
 
-### 📸 Screen Capture
-- "Take a screenshot"
-- Screen recording capability
-- Saved to Pictures/April Screenshots
+```text
+What is 5 + 3
+sqrt(144)
+factorial(5)
+100 kg to lbs
+30°C to fahrenheit
+50 miles to km
+```
 
-### 🎮 Gaming
-- "Play Angry Birds"
-- Custom game paths in settings
-- Steam integration
+### Web Search
 
-### ⏰ Task Scheduler
-- "Remind me to call mom at 5pm"
-- Recurring reminders
-- Daily summaries
+You can search the web using simple commands.
 
-### 📞 WhatsApp Handling
-- Monitors for incoming calls
-- Asks "Are you okay, Sai?"
-- Auto-responds if busy
-- Logs all calls
+```text
+Search Python tutorials
+Search latest technology news
+```
 
-### 🔒 Security & Privacy
-- All data stored locally
-- AES encryption for sensitive data
-- Voice profile authentication
-- No cloud sync
-- Safe code sandbox
+### Application Control
 
-## Commands Reference
+Open or close applications using voice or text.
 
-| Command | Action |
-|---------|--------|
-| **Intelligence** | |
-| "what is 5 + 3" | Math calculation |
-| "sqrt(144)" | Advanced math functions |
-| "100 kg to lbs" | Unit conversion |
-| "define [word]" | Word definition |
-| "search [query]" | Web search (DuckDuckGo) |
-| "system status" | System health |
-| "cpu usage" | CPU percentage |
-| "memory usage" | RAM status |
-| **Apps & System** | |
-| "open [any app]" | Open application |
-| "close [any app]" | Close application |
-| "lock" | Lock screen |
-| "shutdown" | Shutdown PC |
-| "volume up/down" | Adjust volume |
-| **Web & Data** | |
-| "open YouTube" | Open website |
-| "stock AAPL" | Stock price |
-| "weather" | Current weather |
-| **Files** | |
-| "organize files" | Sort downloads |
-| "clean junk" | Remove temp files |
-| "screenshot" | Capture screen |
-| **Misc** | |
-| "tell me a joke" | Random joke |
-| "tell me a fact" | Random fact |
-| "help" | Show commands |
+```text
+Open Chrome
+Open Spotify
+Open Photoshop
+Close Notepad
+Close Discord
+```
+
+April can search common Windows application locations to find installed programs.
+
+### Website Access
+
+Open websites directly:
+
+```text
+Open YouTube
+Open Google
+Open GitHub
+```
+
+### System Information
+
+Check your computer status:
+
+```text
+System status
+CPU usage
+Memory usage
+What's using memory
+```
+
+April can show information such as:
+
+* CPU usage
+* RAM usage
+* Disk usage
+* Battery status
+* Running processes
+
+### Weather
+
+Check the weather without an API key.
+
+```text
+Weather in New York
+Weather today
+```
+
+April uses wttr.in for weather information.
+
+### File Management
+
+April can help manage files on your computer.
+
+```text
+Organize my files
+Clean junk files
+Find large files
+Find duplicate files
+```
+
+Files can be organized into folders such as:
+
+* Documents
+* Pictures
+* Videos
+* Music
+* Archives
+* Code
+
+### System Control
+
+Control basic Windows functions:
+
+```text
+Shutdown
+Restart
+Lock screen
+Volume up
+Volume down
+Brightness 50
+```
+
+### Screenshots
+
+Take screenshots using a command:
+
+```text
+Take a screenshot
+```
+
+Screenshots are saved in:
+
+```text
+Pictures/April Screenshots
+```
+
+### Gaming
+
+April can launch games and applications.
+
+```text
+Play Angry Birds
+Open Steam
+```
+
+Game paths can be configured in the settings.
+
+### Reminders
+
+Create reminders using natural commands:
+
+```text
+Remind me to call mom at 5pm
+```
+
+April can also support recurring reminders.
+
+### Market Data
+
+Check stock and cryptocurrency information:
+
+```text
+Stock AAPL
+Bitcoin price
+```
+
+Historical data can also be stored locally.
+
+## Common Commands
+
+| Command                   | Action                  |
+| ------------------------- | ----------------------- |
+| `what is 5 + 3`           | Calculate               |
+| `sqrt(144)`               | Advanced calculation    |
+| `100 kg to lbs`           | Unit conversion         |
+| `define algorithm`        | Word definition         |
+| `search Python tutorials` | Web search              |
+| `system status`           | System information      |
+| `cpu usage`               | CPU usage               |
+| `memory usage`            | RAM usage               |
+| `open Chrome`             | Open an application     |
+| `close Discord`           | Close an application    |
+| `lock`                    | Lock Windows            |
+| `shutdown`                | Shut down the PC        |
+| `volume up`               | Increase volume         |
+| `volume down`             | Decrease volume         |
+| `open YouTube`            | Open a website          |
+| `stock AAPL`              | Check stock price       |
+| `weather`                 | Check weather           |
+| `organize files`          | Organize files          |
+| `clean junk`              | Clean temporary files   |
+| `screenshot`              | Take a screenshot       |
+| `tell me a joke`          | Tell a joke             |
+| `tell me a fact`          | Tell a fact             |
+| `help`                    | Show available commands |
 
 ## Settings
 
-Access settings via the ⚙️ button or say "Open settings"
+Open settings by clicking the settings button or saying:
 
-### AI Configuration
-- **Ollama (Recommended):** Runs locally, unlimited, free
-- **Gemini API:** Optional fallback
+```text
+Open settings
+```
 
-### Preferences
-- Default city for weather
-- Start with Windows
-- Enable/disable wake word
-- Voice profile setup
+You can configure:
+
+* Ollama model
+* Optional Gemini API
+* Default weather location
+* Start with Windows
+* Wake word
+* Voice settings
+* Other April preferences
 
 ## System Tray
 
-April runs in the system tray when minimized:
-- Click tray icon to show
-- Right-click for menu
-- Enable "Start with Windows"
+When April is minimized it can run from the Windows system tray.
 
-## Logs
+From the tray you can:
 
-Logs are stored in: `~/.april/logs/`
+* Open April
+* Hide April
+* Open settings
+* Exit April
+* Enable startup with Windows
 
-## Database
+## Privacy
 
-Encrypted SQLite database in: `~/.april/april.db`
+April is designed to keep your data on your computer.
 
-Stores:
-- Command history
-- Market data
-- Preferences
-- Call logs
-- Feedback ratings
+* Local AI through Ollama
+* Local database
+* Local logs
+* No required cloud AI API
+* No required API key
+* Sensitive information can be encrypted
+
+Some features such as web search, weather, and market data require an internet connection.
+
+## Files and Data
+
+April stores its local data in:
+
+```text
+~/.april/
+```
+
+Logs:
+
+```text
+~/.april/logs/
+```
+
+Database:
+
+```text
+~/.april/april.db
+```
+
+The database can contain:
+
+* Command history
+* Preferences
+* Market data
+* Feedback
+* Other April settings
 
 ## Troubleshooting
 
-### Ollama not detected
-1. Download from [ollama.com](https://ollama.com)
-2. Install and run Ollama
-3. Run: `ollama pull gemma3:4b`
-4. Restart April
+### Ollama is not detected
 
-### Microphone not working
-1. Check Windows microphone permissions
-2. Ensure PyAudio is installed correctly
-3. Try: `pip install pipwin && pipwin install pyaudio`
+Make sure Ollama is installed and running.
 
-### System status shows limited info
-- Install psutil: `pip install psutil`
-- This enables CPU, RAM, Disk monitoring
+Then run:
 
-### Voice not recognized
-- Speak clearly and directly
-- Reduce background noise
-- Say "Hey April" to activate
+```batch
+ollama pull gemma3:1b
+```
+
+Restart April after installing the model.
+
+### Microphone is not working
+
+Check:
+
+1. Windows microphone permissions
+2. Your microphone connection
+3. PyAudio installation
+
+Try:
+
+```batch
+pip install pipwin
+pipwin install pyaudio
+```
+
+### System information is missing
+
+Install psutil:
+
+```batch
+pip install psutil
+```
+
+### Voice recognition is not working
+
+Try speaking clearly and reduce background noise.
+
+You can also say:
+
+```text
+Hey April
+```
+
+to activate the assistant.
 
 ## License
-Personal use only. Created for Sai.
+
+Personal use only.
+
+Created for Sai.
 
 ---
-Made with ❤️ by April
+
+Made with April
