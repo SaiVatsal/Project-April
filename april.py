@@ -1,14 +1,3 @@
-"""
-╔═══════════════════════════════════════════════════════════════════════════════╗
-║                              APRIL - Personal AI Assistant                      ║
-║                         Voice-Controlled Desktop Assistant for Windows          ║
-║                                    Version 1.0.0                                ║
-╚═══════════════════════════════════════════════════════════════════════════════╝
-
-Author: Created for Sai
-Features: Voice control, Wake word detection, Market data, System control,
-          WhatsApp handling, File management, Weather, Screen capture, and more.
-"""
 
 import os
 import sys
@@ -35,16 +24,13 @@ if sys.platform == 'win32':
     except:
         pass
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# CONFIGURATION
-# ═══════════════════════════════════════════════════════════════════════════════
 
 APP_NAME = "April"
 APP_VERSION = "1.0.0"
 WAKE_WORD = "hey april"
 USER_NAME = "Sai"
 
-# Paths
+
 USER_HOME = Path.home()
 APP_DATA_DIR = USER_HOME / ".april"
 DATABASE_PATH = APP_DATA_DIR / "april.db"
@@ -52,21 +38,16 @@ LOG_PATH = APP_DATA_DIR / "logs" / "april.log"
 CONFIG_PATH = APP_DATA_DIR / "config.json"
 VOICE_PROFILE_PATH = APP_DATA_DIR / "voice_profile.dat"
 
-# Default folders for file organization
 DEFAULT_FOLDERS: Dict[str, List[str]] = {
     'Videos': ['mp4', 'mkv', 'avi', 'mov', 'wmv', 'flv', 'webm'],
     'Music': ['mp3', 'wav', 'flac', 'aac', 'ogg', 'wma', 'm4a'],
     'Pictures': ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'svg', 'webp', 'ico'],
     'Documents': ['pdf', 'doc', 'docx', 'txt', 'xls', 'xlsx', 'ppt', 'pptx', 'odt'],
-    'Downloads': []  # Default for unrecognized files
+    'Downloads': []  
 }
 
-# Junk file patterns
-JUNK_PATTERNS = ['*.tmp', '*.temp', '~*', '*.bak', 'Thumbs.db', 'desktop.ini', '*.log']
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# IMPORTS CHECK AND AUTO-INSTALL
-# ═══════════════════════════════════════════════════════════════════════════════
+JUNK_PATTERNS = ['*.tmp', '*.temp', '~*', '*.bak', 'Thumbs.db', 'desktop.ini', '*.log']
 
 def check_dependencies() -> bool:
     """Check if required dependencies are installed."""
@@ -105,17 +86,13 @@ def check_dependencies() -> bool:
         input("\nPress Enter to exit...")
         return False
     return True
-
-# Check dependencies before importing
 if not check_dependencies():
     sys.exit(0)
-
-# Now import all dependencies
 import tkinter as tk
 from tkinter import ttk, messagebox, scrolledtext
-import speech_recognition as sr  # type: ignore
-import pyttsx3  # type: ignore
-from PIL import Image, ImageDraw, ImageTk  # type: ignore
+import speech_recognition as sr 
+import pyttsx3  
+from PIL import Image, ImageDraw, ImageTk
 import pystray  # type: ignore
 from cryptography.fernet import Fernet  # type: ignore
 from cryptography.hazmat.primitives import hashes  # type: ignore
@@ -129,7 +106,7 @@ import cv2  # type: ignore
 import schedule  # type: ignore
 import yfinance as yf  # type: ignore
 
-# Windows-specific imports
+
 try:
     import win32api  # type: ignore
     import win32con  # type: ignore
